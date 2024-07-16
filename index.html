@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Starts From Here -->
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-logo">LOGO</div>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Achievements</a></li>
+                <li><a href="#">Life at Fazaia</a></li>
+                <li><a href="#">Picture Gallery</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Upcoming Events</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button class="contact-us">Contact Us</button>
+            <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+        </nav>
+
+        <!-- Hero Section -->
+
+
+        <header class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>A Journey Through Excellence</h1>
+                <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential
+                    academically, socially, and personally. We believe in nurturing well-rounded individuals who are
+                    equipped to excel in a rapidly changing global landscape.
+                </p>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+            <a href="#" onclick="closeSidebar()">Home</a>
+            <a href="#" onclick="closeSidebar()">About Us</a>
+            <a href="#" onclick="closeSidebar()">Academics</a>
+            <a href="#" onclick="closeSidebar()">Achievements</a>
+            <a href="#" onclick="closeSidebar()">Life at Fazaia</a>
+            <a href="#" onclick="closeSidebar()">Picture Gallery</a>
+            <a href="#" onclick="closeSidebar()">Facilities</a>
+            <a href="#" onclick="closeSidebar()">Upcoming Events</a>  
+            <a href="#" onclick="closeSidebar()">Admission</a>  
+            <a href="#" onclick="closeSidebar()">Contact Us</a>
+        </div>
+    </header>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+        }
+    </script>
+
+    <!-- Header Ends Here -->
+
+    <!-- Intro Starts From Here -->
+
+    <section class="introduction-section">
+        <div class="introduction-content">
+            <h2 class="introduction-heading">Introduction</h2>
+            <p class="introduction-paragraph">Welcome to Fazaia Intermediate College, O-Level Section!</p>
+
+            <p class="introduction-paragraph">Dear Students, Parents, and Visitors</p>
+
+            <p class="introduction-paragraph">We are delighted to extend a warm welcome to you to the official O-Level section of Fazaia Inter College's website. At Fazaia Inter College, we strive to foster an environment where excellence meets holistic education. Our dedicated faculty, state-of-the-art facilities, and commitment to student success make us a premier choice for O-Level education.
+            </p>
+
+            <p class="introduction-paragraph">This platform is designed to provide you with comprehensive information about our academic programs, extracurricular activities, and support services that enhance the learning journey of our students. Whether you are a prospective student exploring our offerings or a parent seeking detailed insights into our educational approach, you will find all the resources you need right here.
+            </p>
+
+            <p class="introduction-paragraph">Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
+            </p>
+
+            <p class="introduction-paragraph">Thank you for visiting our website. We invite you to discover more about how Fazaia Intermediate College prepares students for a successful future.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Intro Ends Here -->
+
+
+    <!-- Mission Section Starts Here -->
+
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="mission-heading"> Our Mission</h2>
+            <p class="mission-description">
+                GROOM HOW-TO-THINK STUDENTS WITH VALUES
+            </p>
+            <h2 class="mission-heading"> Our Vision</h2>
+            <p class="mission-description">
+                BE AMONGST THE MOST RESPECTED CHAINS OF SCHOOLS AND COLLEGES
+            </p>
+            <h2 class="mission-heading">Core Values</h2>
+            <p class="mission-description">
+                INTEGRITY, COGNITION, APPLICATION
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Mission Ends Here -->
+
+    <!-- Overview Section Starts Here -->
+
+    <section class="college-overview">
+        <div class="overview-text">
+            <h2>College overview</h2>
+            <p>
+                Welcome to Fazaia Inter College E-9 Islamabad, where our campus stands as a testament to modern
+                educational architecture and innovative design. Our facilities are meticulously designed to foster an
+                environment conducive to learning and personal growth. From the moment you step onto our campus, you'll
+                be greeted by a blend of contemporary aesthetics and functional spaces. Our classrooms are equipped with
+                state-of-the-art technology and ergonomic furnishings, ensuring that students learn in comfort and with
+                access to the latest educational resources. The campus features specialized laboratories for science and
+                computer studies, alongside a comprehensive library that houses a wealth of digital and print resources.
+                We prioritize student well-being with ample green spaces and recreational areas where students can
+                unwind and socialize. Safety and accessibility are paramount, with modern security systems and
+                facilities designed to meet the needs of all students. At our campus isn't just a place of
+                education—it's a dynamic hub where students can explore, innovate, and prepare for a successful future
+                in a supportive and inspiring environment.
+
+            </p>
+        </div>
+        <div class="overview-images">
+            <img src="Assets/about-img-1.jpg" alt="Campus Image 1">
+            <img src="Assets/about-img-2.jpg" alt="Campus Image 2">
+            <img src="Assets/about-img-3.jpg" alt="Campus Image 2">
+        </div>
+    </section>
+
+    <!-- Overview Section Ends Here -->
+
+</body>
+
+
+</html>
