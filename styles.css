@@ -442,6 +442,11 @@ span {
 }
 
 @media (max-width: 1068px) {
+    .introduction-section {
+        padding: 3px 20px;
+        text-align: left;
+    }
+
     .introduction-content {
         flex-direction: column-reverse; /* Image comes before text on mobile and tablet */
     }
