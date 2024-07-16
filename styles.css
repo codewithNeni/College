@@ -56,7 +56,11 @@ header {
 .navbar-links a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+span{
+    color: #FF9534;
 }
 
 .navbar-links a::after {
@@ -73,6 +77,7 @@ header {
 .navbar-links a:hover::after,
 .navbar-links a.active::after {
     width: 100%;
+    color: #FF9534;
 }
 
 .menu-icon {
@@ -359,12 +364,12 @@ header {
 .introduction-heading {
     font-size: var(--dekstop-h2-fontsize);
     margin: 0 0 20px;
-    color: black;
+    color: #FF9534;
 }
 
 .introduction-paragraph {
     font-size: 1.1rem;
-    color: rgba(0, 0, 0, 0.863);
+    color: #22343D;
     margin: 20px 0;
 }
 
@@ -421,13 +426,13 @@ header {
 
 .mission-heading {
     font-size: var(--dekstop-h2-fontsize);
-    color: black;
     margin-top: 30px;
+    color: #22343D;
 }
 
 .mission-description {
     font-size: 1.125rem;
-    color: rgba(0, 0, 0, 0.863);
+    color: #22343D;
     line-height: 1.6;
     margin-top: 10px;
 
@@ -470,7 +475,7 @@ header {
 
 .overview-text h2 {
     font-size: var(--dekstop-h2-fontsize);
-    color: black;
+    color: #FF9534;
     max-width: 1300px;
     margin: 20px auto;
 
