@@ -16,17 +16,24 @@
 
     <!-- Header Starts From Here -->
 
-    <header >
+    
+    <header>
         <!-- Navbar -->
-        <nav class="navbar" data-aos="fade-down"
-        data-aos-duration="2000">
+        <nav class="navbar" data-aos="fade-down" data-aos-duration="2000">
             <div class="navbar-logo">
-                <img src="Assets/logo.jpg" alt="">
+                <img src="Assets/logo.jpg" alt="Logo">
             </div>
             <ul class="navbar-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Academics</a></li>
+                <li class="dropdown">
+                    <a href="#">Academics &#x25BC;</a> <!-- Arrow added here -->
+                    <ul class="dropdown-content">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Achievements</a></li>
                 <li><a href="#">Life at Fazaia</a></li>
                 <li><a href="#">Picture Gallery</a></li>
@@ -37,26 +44,31 @@
             </ul>
             <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
         </nav>
-    
+
         <!-- Hero Section -->
         <div class="hero-section">
             <div class="hero-overlay"></div>
-            <div class="hero-content"  data-aos="fade-up"
-            data-aos-duration="2000">
-                <h1><span>About Us </span></h1>
-                <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="2000">
+                <h1>A <span>Glimpse </span> Into Our College Life</h1>
+                <p>Discover the vibrant life at Fazaia Intermediate College through our image gallery. See our students
+                    in action, from classroom activities and sports events to arts performances and school trips.
+                    Experience the essence of our community and the moments that make our school unique.
                 </p>
             </div>
         </div>
-    
+
         <!-- Sidebar -->
         <div id="sidebar" class="sidebar">
             <button class="close-btn" onclick="toggleSidebar()">&times;</button>
             <a href="#" onclick="closeSidebar()">Home</a>
             <a href="#" onclick="closeSidebar()">About Us</a>
-            <a href="#" onclick="closeSidebar()">Academics</a>
+            <a href="#" class="dropdown" onclick="toggleDropdown(event)">Academics &#x25BC;</a> <!-- Arrow added here -->
+            <ul class="sidebar-dropdown-content">
+                <li><a href="#" onclick="closeSidebar()">Option 1</a></li>
+                <li><a href="#" onclick="closeSidebar()">Option 2</a></li>
+                <li><a href="#" onclick="closeSidebar()">Option 3</a></li>
+            </ul>
             <a href="#" onclick="closeSidebar()">Achievements</a>
-            <a href="#" onclick="closeSidebar()">O and A Levels</a>
             <a href="#" onclick="closeSidebar()">Life at Fazaia</a>
             <a href="#" onclick="closeSidebar()">Picture Gallery</a>
             <a href="#" onclick="closeSidebar()">Facilities</a>
@@ -65,17 +77,35 @@
             <a href="#" onclick="closeSidebar()">Contact Us</a>
         </div>
     </header>
-    
+
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('active');
         }
-    
+
         function closeSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.remove('active');
         }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.nextElementSibling;
+            dropdown.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown')) {
+                const dropdowns = document.getElementsByClassName("sidebar-dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
     </script>
 
     <!-- Header Ends Here -->
@@ -168,6 +198,7 @@
     </section>
 
     <!-- Overview Section Ends Here -->
+    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
