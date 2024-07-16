@@ -19,36 +19,36 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar">
-            <div class="navbar-logo">LOGO</div>
+            <div class="navbar-logo">
+                <img src="Assets/logo.jpg" alt="">
+            </div>
             <ul class="navbar-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Academics</a></li>
-                <li><a href="#">O and A Levels</a></li>
                 <li><a href="#">Achievements</a></li>
                 <li><a href="#">Life at Fazaia</a></li>
                 <li><a href="#">Picture Gallery</a></li>
                 <li><a href="#">Facilities</a></li>
                 <li><a href="#">Upcoming Events</a></li>
                 <li><a href="#">Admission</a></li>
-                <li><a href="#">Contact Us</a></li> 
+                <li><a href="#">Contact Us</a></li>
             </ul>
+            <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
         </nav>
-
+    
         <!-- Hero Section -->
-
-
-        <header class="hero-section">
+        <div class="hero-section">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>A Journey Through Excellence</h1>
-                <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential
-                    academically, socially, and personally. We believe in nurturing well-rounded individuals who are
-                    equipped to excel in a rapidly changing global landscape.
+                <h1>A Glimpse Into Our College Life</h1>
+                <p>Discover the vibrant life at Fazaia Intermediate College through our image gallery. See our students
+                    in action, from classroom activities and sports events to arts performances and school trips.
+                    Experience the essence of our community and the moments that make our school unique.
                 </p>
             </div>
-        </header>
-
+        </div>
+    
         <!-- Sidebar -->
         <div id="sidebar" class="sidebar">
             <button class="close-btn" onclick="toggleSidebar()">&times;</button>
@@ -60,18 +60,18 @@
             <a href="#" onclick="closeSidebar()">Life at Fazaia</a>
             <a href="#" onclick="closeSidebar()">Picture Gallery</a>
             <a href="#" onclick="closeSidebar()">Facilities</a>
-            <a href="#" onclick="closeSidebar()">Upcoming Events</a>  
-            <a href="#" onclick="closeSidebar()">Admission</a>  
+            <a href="#" onclick="closeSidebar()">Upcoming Events</a>
+            <a href="#" onclick="closeSidebar()">Admission</a>
             <a href="#" onclick="closeSidebar()">Contact Us</a>
         </div>
     </header>
-
+    
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('active');
         }
-
+    
         function closeSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.remove('active');
@@ -84,23 +84,18 @@
 
     <section class="introduction-section">
         <div class="introduction-content">
-            <h2 class="introduction-heading">Introduction</h2>
-            <p class="introduction-paragraph">Welcome to Fazaia Intermediate College, O-Level Section!</p>
-
-            <p class="introduction-paragraph">Dear Students, Parents, and Visitors</p>
-
-            <p class="introduction-paragraph">We are delighted to extend a warm welcome to you to the official O-Level section of Fazaia Inter College's website. At Fazaia Inter College, we strive to foster an environment where excellence meets holistic education. Our dedicated faculty, state-of-the-art facilities, and commitment to student success make us a premier choice for O-Level education.
-            </p>
-
-            <p class="introduction-paragraph">This platform is designed to provide you with comprehensive information about our academic programs, extracurricular activities, and support services that enhance the learning journey of our students. Whether you are a prospective student exploring our offerings or a parent seeking detailed insights into our educational approach, you will find all the resources you need right here.
-            </p>
-
-            <p class="introduction-paragraph">Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
-            </p>
-
-            <p class="introduction-paragraph">Thank you for visiting our website. We invite you to discover more about how Fazaia Intermediate College prepares students for a successful future.
-
-            </p>
+            <div class="text-content">
+                <h2 class="introduction-heading">Introduction</h2>
+                <p class="introduction-paragraph">Welcome to Fazaia Intermediate College, O-Level Section!</p>
+                <p class="introduction-paragraph">Dear Students, Parents, and Visitors</p>
+                <p class="introduction-paragraph">FIC E9 Islamabad is a distinguished educational institution offering both Cambridge and Federal Board curricula, accommodating students from preparatory grades to Grade 12. Situated in the heart of Islamabad, the school provides a conducive environment for academic excellence and holistic development.</p>
+                <p class="introduction-paragraph">Our mission is to inspire and empower students to become compassionate leaders, critical thinkers, and global citizens. We believe that education is a powerful tool for transformation and are dedicated to helping students reach their full potential.</p>
+                <p class="introduction-paragraph">The institution places a strong emphasis on co-curricular activities as integral components of its educational philosophy. These activities are meticulously designed to foster character building and enhance personality development among students. From sports to arts, debates, drama, and community service initiatives, FIC E9 Islamabad ensures a well-rounded education that goes beyond textbooks.</p>
+                <p class="introduction-paragraph">Thank you for visiting our website. We invite you to discover more about how Fazaia Intermediate College prepares students for a successful future.</p>
+            </div>
+            <div class="image-content">
+                <img src="Assets/principal.jpg" alt="FIC E9 Campus">
+            </div>
         </div>
     </section>
 

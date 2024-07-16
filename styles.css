@@ -11,7 +11,7 @@ body{
 
 :root{
     --mobile-h2-font-size: 2.2rem;
-    --dekstop-h2-fontsize : 2rem;
+    --dekstop-h2-fontsize : 3rem;
 }
 
 /* Nav bar Starts From Here */
@@ -32,13 +32,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 10px;
     z-index: 4; /* Ensures the navbar is above other content */
     backdrop-filter: blur(10px); /* Apply a blur effect */
 }
 
-.navbar-logo {
-    font-size: 20px;
+.navbar-logo img {
+    height: 100px;
+    cursor: pointer;
 }
 
 .navbar-links {
@@ -48,9 +49,14 @@ header {
     padding: 0;
 }
 
+.navbar-links li {
+    margin: 0 15px;
+}
 
-.sidebar a:hover {
-    background-color: #575757;
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .navbar-links a::after {
@@ -69,92 +75,30 @@ header {
     width: 100%;
 }
 
-.navbar-links li {
-    margin: 0 15px;
-}
-
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.contact-us {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-us:hover {
-    background-color: #777;
-}
-
 .menu-icon {
     display: none;
     background-color: transparent;
     border: none;
-    font-size: 24px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
-}
-
-/* Hero Section Styles */
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    background: url('your-hero-image.jpg') no-repeat center center;
-    background-size: cover; /* Make sure the image covers the entire section */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding-top: 60px; /* To ensure content is visible below the fixed navbar */
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin: 10px 0 0;
+    z-index: 100;
 }
 
 /* Sidebar Styles */
 .sidebar {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     top: 0;
     right: 0;
-    width: 250px;
+    width: 0;
     height: 100%;
-    background-color: #333;
+    background-color: #3333339d;
     padding-top: 60px;
     transition: 0.3s;
     overflow-x: hidden;
+    backdrop-filter: blur(10px); /* Apply a blur effect */
 }
 
 .sidebar a {
@@ -180,12 +124,51 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-    }
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    background: url('Assets/College/1.jpg') no-repeat center center;
+    background-size: cover; /* Make sure the image covers the entire section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
 
-    .contact-us {
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 60%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 10px 0 0;
+}
+
+@media (max-width: 1068px) {
+    .navbar-links {
         display: none;
     }
 
@@ -201,7 +184,57 @@ header {
     .sidebar.active {
         width: 250px;
     }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        z-index: 4; /* Ensures the navbar is above other content */
+        backdrop-filter: blur(10px); /* Apply a blur effect */
+    }
+    
+    .navbar-logo img {
+        height: 100px;
+        cursor: pointer;
+    }
+    
 }
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+}
+
 /* Nav bar Ends Here */
 
 /* Hero Starts From Here */
@@ -258,7 +291,20 @@ header {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1080px) {
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: url('Assets/Hero-img.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -271,7 +317,7 @@ header {
     position: relative;
     z-index: 2;
     padding: 20px;
-    width: 90%;
+    width: 100%;
 }
 }
 
@@ -280,15 +326,34 @@ header {
 
 /* introduction Starts From Here */
 
-
 .introduction-section {
     padding: 50px 20px;
     text-align: left;
 }
 
 .introduction-content {
-    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
     margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px; /* Space between text and image */
+}
+
+.image-content {
+    flex: 1;
+    max-width: 500px; /* Adjust based on your design */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
 }
 
 .introduction-heading {
@@ -298,9 +363,32 @@ header {
 }
 
 .introduction-paragraph {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: rgba(0, 0, 0, 0.863);
-    margin: 20px 0px;
+    margin: 20px 0;
+}
+
+@media (max-width: 1068px) {
+    .introduction-content {
+        flex-direction: column-reverse; /* Image comes before text on mobile and tablet */
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between text and image on mobile */
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+
+    .introduction-heading {
+        font-size: var(--mobile-h2-font-size);
+    }
+
+    .introduction-paragraph {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -312,6 +400,7 @@ header {
         font-size: 1rem;
     }
 }
+
 
 /* introduction Ends Here */
 
@@ -331,7 +420,7 @@ header {
 }
 
 .mission-heading {
-    font-size: 2rem;
+    font-size: var(--dekstop-h2-fontsize);
     color: black;
     margin-top: 30px;
 }
@@ -380,7 +469,7 @@ header {
 }
 
 .overview-text h2 {
-    font-size: 3rem;
+    font-size: var(--dekstop-h2-fontsize);
     color: black;
     max-width: 1300px;
     margin: 20px auto;
