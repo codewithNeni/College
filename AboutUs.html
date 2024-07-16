@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Nav Bar Starts From Here -->
+
+    <nav class="navbar">
+        <div class="navbar-logo">LOGO</div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Student Life</a></li>
+            <li><a href="#">Parents</a></li>
+            <li><a href="#">Alumni</a></li>
+        </ul>
+        <button class="contact-us">Contact Us</button>
+        <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <a href="#" onclick="closeSidebar()">Home</a>
+        <a href="#" onclick="closeSidebar()">About</a>
+        <a href="#" onclick="closeSidebar()">Academics</a>
+        <a href="#" onclick="closeSidebar()">Admissions</a>
+        <a href="#" onclick="closeSidebar()">Student Life</a>
+        <a href="#" onclick="closeSidebar()">Parents</a>
+        <a href="#" onclick="closeSidebar()">Alumni</a>
+        <a href="#" onclick="closeSidebar()">Contact Us</a>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+        }
+    </script>
+
+    <!-- Nav Bar Ends Here -->
+
+    <!-- About Us Section Starts Here -->
+
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>A Journey Through Excellence</h1>
+            <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential
+                academically, socially, and personally. We believe in nurturing well-rounded individuals who are
+                equipped to excel in a rapidly changing global landscape.
+            </p>
+        </div>
+    </header>
+
+
+    <!-- About Us Ends Here -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+
+</html>
