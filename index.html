@@ -5,76 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Header Starts From Here -->
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="Assets/logo.jpg" alt=""></div>
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Academics <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="#">O & A Levels</a>
+                    <a href="#">Other Diciplines</a>
+                </div>
+            </li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Life at Fazaia</a></li>
+            <li><a href="#">Picture Gallery</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Upcoming Events</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
+    </nav>
 
     
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar" data-aos="fade-down" data-aos-duration="2000">
-            <div class="navbar-logo">
-                <img src="Assets/logo.jpg" alt="Logo">
-            </div>
-            <ul class="navbar-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#">Academics &#x25BC;</a> <!-- Arrow added here -->
-                    <ul class="dropdown-content">
-                        <li><a href="#">Option 1</a></li>
-                        <li><a href="#">Option 2</a></li>
-                        <li><a href="#">Option 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Achievements</a></li>
-                <li><a href="#">Life at Fazaia</a></li>
-                <li><a href="#">Picture Gallery</a></li>
-                <li><a href="#">Facilities</a></li>
-                <li><a href="#">Upcoming Events</a></li>
-                <li><a href="#">Admission</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <button class="menu-icon" onclick="toggleSidebar()">&#9776;</button>
-        </nav>
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="2000">
+            <h1><span>About Us </span></h1>
+            <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
+            </p>
+        </div>
+    </div>
 
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="2000">
-                <h1><span>About Us </span></h1>
-                <p>Explore our vibrant campus life, where every student is encouraged to achieve their full potential academically, socially, and personally. We believe in nurturing well-rounded individuals who are equipped to excel in a rapidly changing global landscape.
-                </p>
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <div class="dropdown-sidebar">
+            <button class="dropbtn-sidebar" onclick="toggleSidebarDropdown()">Academics <span
+                    class="arrow">&#9662;</span></button>
+            <div class="dropdown-content-sidebar">
+                <a href="#" onclick="closeSidebar()">O & A Levels</a>
+                <a href="#" onclick="closeSidebar()">Other Diciplines</a>
             </div>
         </div>
-
-        <!-- Sidebar -->
-        <div id="sidebar" class="sidebar">
-            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
-            <a href="#" onclick="closeSidebar()">Home</a>
-            <a href="#" onclick="closeSidebar()">About Us</a>
-            <a href="#" class="dropdown" onclick="toggleDropdown(event)">Academics &#x25BC;</a> <!-- Arrow added here -->
-            <ul class="sidebar-dropdown-content">
-                <li><a href="#" onclick="closeSidebar()">Option 1</a></li>
-                <li><a href="#" onclick="closeSidebar()">Option 2</a></li>
-                <li><a href="#" onclick="closeSidebar()">Option 3</a></li>
-            </ul>
-            <a href="#" onclick="closeSidebar()">Achievements</a>
-            <a href="#" onclick="closeSidebar()">Life at Fazaia</a>
-            <a href="#" onclick="closeSidebar()">Picture Gallery</a>
-            <a href="#" onclick="closeSidebar()">Facilities</a>
-            <a href="#" onclick="closeSidebar()">Upcoming Events</a>
-            <a href="#" onclick="closeSidebar()">Admission</a>
-            <a href="#" onclick="closeSidebar()">Contact Us</a>
-        </div>
-    </header>
+        <a href="#" onclick="closeSidebar()">Home</a>
+        <a href="#" onclick="closeSidebar()">About Us</a>
+        <a href="#" onclick="closeSidebar()">Achievements</a>
+        <a href="#" onclick="closeSidebar()">Life at Fazaia</a>
+        <a href="#" onclick="closeSidebar()">Facilities</a>
+        <a href="#" onclick="closeSidebar()">Upcoming Events</a>
+        <a href="#" onclick="closeSidebar()">Contact Us</a>
+    </div>
 
     <script>
         function toggleSidebar() {
@@ -82,35 +71,22 @@
             sidebar.classList.toggle('active');
         }
 
-        function closeSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.remove('active');
-        }
-
-        function toggleDropdown(event) {
-            event.preventDefault();
-            const dropdown = event.target.nextElementSibling;
+        function toggleSidebarDropdown() {
+            const dropdown = document.querySelector('.dropdown-content-sidebar');
             dropdown.classList.toggle('show');
         }
 
-        document.addEventListener('click', function(event) {
-            if (!event.target.matches('.dropdown')) {
-                const dropdowns = document.getElementsByClassName("sidebar-dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        });
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.remove('active');
+            const dropdown = document.querySelector('.dropdown-content-sidebar');
+            dropdown.classList.remove('show');
+        }
     </script>
 
-    <!-- Header Ends Here -->
+      <!-- Intro Starts From Here -->
 
-    <!-- Intro Starts From Here -->
-
-    <section class="introduction-section">
+      <section class="introduction-section">
         <div class="introduction-content" >
             <div class="text-content"  data-aos="fade-right"
             data-aos-duration="2500">
@@ -131,35 +107,35 @@
 
     <!-- Intro Ends Here -->
 
+        <!-- Mission Section Starts Here -->
 
-    <!-- Mission Section Starts Here -->
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="mission-heading"  data-aos="fade-right"
+                data-aos-duration="2500"> Our Mission</h2>
+                <p class="mission-description"  data-aos="fade-right"
+                data-aos-duration="2500">
+                    Our Mission is to provide high quality education and child care in a safe , respectful and inclusive environment that builds a foundation for life-long learning.
+                </p>
+                <h2 class="mission-heading" data-aos="fade-left"
+                data-aos-duration="2500"> Our Vision</h2>
+                <p class="mission-description" data-aos="fade-left"
+                data-aos-duration="2500">
+                    Our Vision is a community where all children feel loved , respected and encouraged to develop to their fullest potential.
+                </p>
+                <h2 class="mission-heading" data-aos="fade-right"
+                data-aos-duration="2500">Core Values</h2>
+                <p class="mission-description" data-aos="fade-right"
+                data-aos-duration="2500">
+                    INTEGRITY, COGNITION, APPLICATION
+                </p>
+            </div>
+        </section>
+    
+    
+        <!-- Mission Ends Here -->
 
-    <section class="mission-section">
-        <div class="container">
-            <h2 class="mission-heading"  data-aos="fade-right"
-            data-aos-duration="2500"> Our Mission</h2>
-            <p class="mission-description"  data-aos="fade-right"
-            data-aos-duration="2500">
-                Our Mission is to provide high quality education and child care in a safe , respectful and inclusive environment that builds a foundation for life-long learning.
-            </p>
-            <h2 class="mission-heading" data-aos="fade-left"
-            data-aos-duration="2500"> Our Vision</h2>
-            <p class="mission-description" data-aos="fade-left"
-            data-aos-duration="2500">
-                Our Vision is a community where all children feel loved , respected and encouraged to develop to their fullest potential.
-            </p>
-            <h2 class="mission-heading" data-aos="fade-right"
-            data-aos-duration="2500">Core Values</h2>
-            <p class="mission-description" data-aos="fade-right"
-            data-aos-duration="2500">
-                INTEGRITY, COGNITION, APPLICATION
-            </p>
-        </div>
-    </section>
-
-
-    <!-- Mission Ends Here -->
-
+        
     <!-- Overview Section Starts Here -->
 
     <section class="college-overview">
@@ -196,13 +172,12 @@
     </section>
 
     <!-- Overview Section Ends Here -->
-    
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
-
 
 </html>
